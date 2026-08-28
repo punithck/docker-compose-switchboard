@@ -1,0 +1,36 @@
+{
+  "projects": [
+    {
+      "name": "sample-platform",
+      "workdir": ".",
+      "composeFiles": ["compose.yaml"],
+      "services": [
+        {
+          "name": "postgres",
+          "displayName": "Postgres",
+          "group": "core",
+          "port": "15432",
+          "description": "Shared database for sample services"
+        },
+        {
+          "name": "auth-api",
+          "displayName": "Auth API",
+          "group": "apis",
+          "port": "18081",
+          "url": "http://localhost:18081",
+          "description": "Sample API container using nginx",
+          "dependsOn": ["postgres"]
+        },
+        {
+          "name": "orders-api",
+          "displayName": "Orders API",
+          "group": "apis",
+          "port": "18082",
+          "url": "http://localhost:18082",
+          "description": "Second sample API container using nginx",
+          "dependsOn": ["postgres"]
+        }
+      ]
+    }
+  ]
+}
