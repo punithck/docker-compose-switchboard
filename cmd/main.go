@@ -114,7 +114,7 @@ func main() {
 	mux := http.NewServeMux()
 	server.routes(mux)
 
-	zlog.Info().Str("addr", *addr).Msg("service switchboard running")
+	zlog.Info().Str("addr", *addr).Msg("Docker compose switchboard running")
 	zlog.Fatal().Err(http.ListenAndServe(*addr, mux)).Msg("http server exited")
 }
 
