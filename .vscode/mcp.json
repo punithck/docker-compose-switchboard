@@ -1,0 +1,30 @@
+{
+  "servers": {
+    "websocket-project-demo": {
+      "command": "go",
+      "args": [
+        "run",
+        "/Users/punithck/Documents/Websocket-project/cmd/mcp-demo"
+      ]
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${workspaceFolder}"
+      ]
+    },
+    "fetch": {
+      "command": "${workspaceFolder}/.venv/bin/python",
+      "args": [
+        "-m",
+        "mcp_server_fetch"
+      ]
+    }
+  }
+}
