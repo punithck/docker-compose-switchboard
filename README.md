@@ -1,6 +1,6 @@
 # Compose Switchboard
 
-![Docker compose switchboard](docs/screenshot.svg)
+![Docker compose switchboard](docs/screenshot-webui.png)
 
 A local browser UI for starting, stopping, and restarting selected Docker Compose services.
 
