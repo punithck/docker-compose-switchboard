@@ -26,7 +26,7 @@ Requirements:
 Run the switchboard:
 
 ```sh
-go run ./cmd/
+go run ./cmd/ --config demo/switchboard.json
 ```
 
 Open:
@@ -41,11 +41,7 @@ This repository includes a small sample `compose.yaml` with:
 - `auth-api`
 - `orders-api`
 
-Turn on `Auth API` in the UI. Compose Switchboard runs:
-
-```sh
-docker compose up -d postgres auth-api
-```
+Turn on `Auth API` in the UI. Compose Switchboard runs auth-api container(`docker compose up -d postgres auth-api`).
 
 Then open:
 
