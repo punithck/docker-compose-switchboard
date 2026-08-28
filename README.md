@@ -1,5 +1,7 @@
 # Compose Switchboard
 
+![Docker compose switchboard](docs/screenshot.svg)
+
 A local browser UI for starting, stopping, and restarting selected Docker Compose services.
 
 Compose Switchboard is useful for monorepos and local development environments with many services, where you want to run only the containers needed for the task in front of you.
